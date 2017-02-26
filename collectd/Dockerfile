@@ -22,7 +22,3 @@ RUN chmod +x /etc/service/collectd/run
 
 ENV HOME /root
 CMD ["/sbin/my_init"]
-
-
-
-
