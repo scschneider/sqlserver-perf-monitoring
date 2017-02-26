@@ -11,7 +11,7 @@ RUN apt-get update &&\
     apt-get install -y apt-transport-https
 
  RUN mkdir -p /etc/service/grafana
- ADD grafana.sh /etc/service/grafana/run
+ ADD run-grafana.sh /etc/service/grafana/run
  RUN chmod +x /etc/service/grafana/run
 
 ENV HOME /root

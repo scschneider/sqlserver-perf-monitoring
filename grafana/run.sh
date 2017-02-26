@@ -1,1 +1,1 @@
-sudo docker run --net=host -d --name grafana scschneider/collectd-grafana
+sudo docker run --net=host -d --name grafana scschneider/sqlserver-perf-monitoring-grafana

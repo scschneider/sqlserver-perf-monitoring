@@ -19,4 +19,4 @@ sudo docker run -d --net=host -v $INFLUXDB_HOST_DIRECTORY:$INFLUXDB_GUEST_DIRECT
         -e "INFLUXDB_WAL_DATA_DIRECTORY=$INFLUXDB_WAL_DATA_DIRECTORY" \
         -e "INFLUXDB_HH_DATA_DIRECTORY=$INFLUXDB_HH_DATA_DIRECTORY" \
         -e "INFLUXDB_COLLECTD_LISTEN_PORT=$INFLUXDB_COLLECTD_LISTEN_PORT" \
-        --name influxdb scschneider/collectd-influxdb
+        --name influxdb scschneider/sqlserver-perf-monitoring-influxdb
