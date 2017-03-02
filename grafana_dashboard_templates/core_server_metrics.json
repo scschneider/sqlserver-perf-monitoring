@@ -153,7 +153,7 @@
               "format": "percent",
               "label": null,
               "logBase": 1,
-              "max": null,
+              "max": "100",
               "min": "0",
               "show": true
             },
@@ -392,12 +392,12 @@
           "id": 3,
           "legend": {
             "avg": false,
-            "current": false,
+            "current": true,
             "max": false,
             "min": false,
             "show": true,
             "total": false,
-            "values": false
+            "values": true
           },
           "lines": true,
           "linewidth": 1,
@@ -1165,7 +1165,7 @@
               "label": null,
               "logBase": 1,
               "max": null,
-              "min": null,
+              "min": "0",
               "show": true
             },
             {
@@ -2062,7 +2062,7 @@
           },
           "yaxes": [
             {
-              "format": "bps",
+              "format": "Bps",
               "label": null,
               "logBase": 1,
               "max": null,
@@ -2607,5 +2607,5 @@
   },
   "timezone": "browser",
   "title": "Core Server Metrics",
-  "version": 57
+  "version": 6
 }
