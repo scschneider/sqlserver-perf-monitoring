@@ -75,6 +75,57 @@
           "steppedLine": false,
           "targets": [
             {
+              "alias": "total",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "auto"
+                  ],
+                  "type": "time"
+                },
+                {
+                  "params": [
+                    "type_instance"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "cpu_value",
+              "policy": "default",
+              "query": "SELECT 100 - mean(\"value\") FROM \"cpu_value\" WHERE \"host\" =~ /^$hostname$/ AND \"type_instance\" = 'idle' AND $timeFilter GROUP BY time($interval), \"type_instance\"",
+              "rawQuery": true,
+              "refId": "B",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [],
+                    "type": "mean"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "host",
+                  "operator": "=~",
+                  "value": "/^$hostname$/"
+                },
+                {
+                  "condition": "AND",
+                  "key": "type_instance",
+                  "operator": "=",
+                  "value": "idle"
+                }
+              ]
+            },
+            {
               "alias": "$tag_type_instance",
               "dsType": "influxdb",
               "groupBy": [
@@ -91,6 +142,7 @@
                   "type": "tag"
                 }
               ],
+              "hide": false,
               "measurement": "cpu_value",
               "policy": "default",
               "query": "SELECT mean(\"value\") FROM \"cpu_value\" WHERE    \"type_instance\" =~ /user|system|nice|irq/    AND \"type\" = 'percent' AND $timeFilter    GROUP BY time($interval), \"host\"",
@@ -2607,5 +2659,5 @@
   },
   "timezone": "browser",
   "title": "Core Server Metrics",
-  "version": 6
+  "version": 9
 }
