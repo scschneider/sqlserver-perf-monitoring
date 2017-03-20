@@ -1,9 +1,12 @@
 #!/bin/bash
 
 # Make sure this folder exists on the host.
-# This gets passed through to the docker container.
+# This directory from the host gets passed through to the docker container.
 INFLUXDB_HOST_DIRECTORY="/mnt/influxdb"
+
+# This is where the mapped host directory get mapped to in the docker container.
 INFLUXDB_GUEST_DIRECTORY="/host/influxdb"
+
 # This is where the InfluxDB directories gets mapped in the container.
 INFLUXDB_DATA_DIRECTORY="/host/influxdb/data/db"
 INFLUXDB_META_DATA_DIRECTORY="/host/influxdb/data/meta"
