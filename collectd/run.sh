@@ -16,7 +16,7 @@ SQL_USERNAME="sa"
 SQL_PASSWORD="sa_password"
 
 #The interval that you would like metrics to be pulld from your SQL Server
-SQL_POLL_INTERVAL="1"
+SQL_POLL_INTERVAL="5"
 
 sudo docker run -d --privileged --net=host -v /:/host:ro \
         -e "INFLUX_DB_SERVER=$INFLUX_DB_SERVER" -e "INFLUX_DB_PORT=$INFLUX_DB_PORT" \
