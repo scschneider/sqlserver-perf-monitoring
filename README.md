@@ -1,6 +1,6 @@
 # What is this project?
 
-This is a project to get users started on monitoring SQL Server on Linux using [collectd](https://collectd.org/), [InfluxDB](https://www.influxdata.com/) and [Grafana](https://grafana.com/).
+This is a project to get users started on monitoring Microsoft SQL Server on Linux using [collectd](https://collectd.org/), [InfluxDB](https://www.influxdata.com/) and [Grafana](https://grafana.com/).
 
 # What do I need?
 
