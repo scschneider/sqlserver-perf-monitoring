@@ -25,7 +25,7 @@ For sizing InfluxDB, refer to their [documentation](https://docs.influxdata.com/
   
 # Setting up Grafana
 
-If you are doing a small (monitoring a few machines) scale setup, you should be fine running this on the same host as your InfluxDB container.
+If you are doing a small (monitoring a few machines) scale setup, you should be fine running this on the same host as your InfluxDB container. We use the image created by [Grafana Labs](http://docs.grafana.org/installation/docker/) and we just added a run.sh file that you can use to run the container.
 
 - Install Docker Engine
   wget -qO- https://get.docker.com/ | sudo sh
