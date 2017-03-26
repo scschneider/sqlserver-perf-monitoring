@@ -456,7 +456,7 @@
             {
               "format": "short",
               "label": null,
-              "logBase": 1,
+              "logBase": 10,
               "max": null,
               "min": "0",
               "show": true
@@ -876,7 +876,7 @@
             {
               "format": "short",
               "label": null,
-              "logBase": 2,
+              "logBase": 10,
               "max": null,
               "min": "0",
               "show": true
@@ -1415,7 +1415,7 @@
             {
               "format": "short",
               "label": null,
-              "logBase": 2,
+              "logBase": 10,
               "max": null,
               "min": "0",
               "show": true
@@ -1776,7 +1776,7 @@
             {
               "format": "deckbytes",
               "label": null,
-              "logBase": 1,
+              "logBase": 10,
               "max": null,
               "min": "0",
               "show": true
@@ -1907,7 +1907,7 @@
             {
               "format": "kbytes",
               "label": null,
-              "logBase": 1,
+              "logBase": 10,
               "max": null,
               "min": "0",
               "show": true
@@ -2025,7 +2025,7 @@
             {
               "format": "ms",
               "label": null,
-              "logBase": 1,
+              "logBase": 10,
               "max": null,
               "min": "0",
               "show": true
@@ -2131,7 +2131,7 @@
             {
               "format": "short",
               "label": null,
-              "logBase": 1,
+              "logBase": 10,
               "max": null,
               "min": "0",
               "show": true
@@ -2214,5 +2214,5 @@
   },
   "timezone": "browser",
   "title": "Core SQL Metrics",
-  "version": 2
+  "version": 4
 }
