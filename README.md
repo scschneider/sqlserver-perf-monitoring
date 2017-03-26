@@ -32,7 +32,6 @@ If you are doing a small (monitoring a few machines) scale setup, you should be 
 - If you are running this separately, you will need to clone this repository
   git clone https://github.com/scschneider/sqlserver-perf-monitoring.git
 - Browse to ./sqlserver-perf-monitoring/grafana
-- Edit run.sh and change the variables to match your environment
 - Run run.sh to pull down the Grafana image create the container
   sudo bash ./run.sh
 - Browse to the URL where Grafana is running http://[MACHINE_IP]:3000
