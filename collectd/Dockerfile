@@ -14,6 +14,7 @@ ENV INFLUX_DB_SERVER  127.0.0.1
 ENV INFLUX_DB_PORT 25826
 
 ADD collectd.conf /etc/collectd/collectd-template.conf
+ADD types.db.mssql /usr/share/collectd/types.db.mssql
 
 RUN mkdir -p /etc/service/collectd
 ADD run-collectd.sh /etc/service/collectd/run
