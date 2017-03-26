@@ -1845,6 +1845,12 @@
                   "key": "type_instance",
                   "operator": "=",
                   "value": "Memory_broker_clerk_size-Buffer_Pool"
+                },
+                {
+                  "condition": "AND",
+                  "key": "host",
+                  "operator": "=~",
+                  "value": "/^$hostname$/"
                 }
               ]
             },
@@ -1871,6 +1877,12 @@
                   "key": "type_instance",
                   "operator": "=",
                   "value": "Memory_broker_clerk_size-Column_store_object_pool"
+                },
+                {
+                  "condition": "AND",
+                  "key": "host",
+                  "operator": "=~",
+                  "value": "/^$hostname$/"
                 }
               ]
             }
@@ -2202,5 +2214,5 @@
   },
   "timezone": "browser",
   "title": "Core SQL Metrics",
-  "version": 16
+  "version": 2
 }

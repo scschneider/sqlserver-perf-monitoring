@@ -2542,7 +2542,7 @@
           "timeShift": null,
           "title": "Free Space (%)",
           "tooltip": {
-            "shared": true,
+            "shared": false,
             "sort": 0,
             "value_type": "individual"
           },
@@ -2551,7 +2551,9 @@
             "mode": "time",
             "name": null,
             "show": true,
-            "values": []
+            "values": [
+              "current"
+            ]
           },
           "yaxes": [
             {
@@ -2659,5 +2661,5 @@
   },
   "timezone": "browser",
   "title": "Core Server Metrics",
-  "version": 9
+  "version": 11
 }
