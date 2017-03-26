@@ -144,7 +144,7 @@
           "title": "CPU Utilization % (User)",
           "tooltip": {
             "shared": true,
-            "sort": 0,
+            "sort": 2,
             "value_type": "individual"
           },
           "type": "graph",
@@ -159,8 +159,8 @@
               "format": "short",
               "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
+              "max": "100",
+              "min": "0",
               "show": true
             },
             {
@@ -285,7 +285,7 @@
           "title": "CPU Utilization % (System)",
           "tooltip": {
             "shared": true,
-            "sort": 0,
+            "sort": 2,
             "value_type": "individual"
           },
           "type": "graph",
@@ -300,8 +300,8 @@
               "format": "short",
               "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
+              "max": "100",
+              "min": "0",
               "show": true
             },
             {
@@ -424,7 +424,7 @@
           "title": "CPU Utilization % (Softirq)",
           "tooltip": {
             "shared": true,
-            "sort": 0,
+            "sort": 2,
             "value_type": "individual"
           },
           "type": "graph",
@@ -439,8 +439,8 @@
               "format": "short",
               "label": null,
               "logBase": 1,
-              "max": null,
-              "min": null,
+              "max": "100",
+              "min": "0",
               "show": true
             },
             {
@@ -520,5 +520,5 @@
   },
   "timezone": "browser",
   "title": "Core Server Metrics by Core",
-  "version": 19
+  "version": 24
 }
