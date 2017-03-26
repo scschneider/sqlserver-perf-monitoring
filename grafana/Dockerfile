@@ -10,9 +10,9 @@ RUN apt-get update &&\
     apt-get install -y grafana &&\
     apt-get install -y apt-transport-https
 
- RUN mkdir -p /etc/service/grafana
- ADD run-grafana.sh /etc/service/grafana/run
- RUN chmod +x /etc/service/grafana/run
+ #RUN mkdir -p /etc/service/grafana
+ #ADD run-grafana.sh /etc/service/grafana/run
+ #RUN chmod +x /etc/service/grafana/run
 
 ENV HOME /root
-CMD ["/sbin/my_init"]
+CMD ["/usr/sbin/grafana-server --homepath=/usr/share/grafana --config=/etc/grafana/grafana.ini"]
