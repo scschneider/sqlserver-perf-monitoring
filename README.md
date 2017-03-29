@@ -22,7 +22,9 @@ For sizing InfluxDB, refer to their [documentation](https://docs.influxdata.com/
 - Browse to ./sqlserver-perf-monitoring/influxdb
 - Edit run.sh and change the variables to match your environment
 - Run run.sh to pull down the InfluxDB image create the container
+  ```
   sudo bash ./run.sh
+  ```
   
 # Setting up Grafana
 
@@ -34,7 +36,9 @@ If you are doing a small (monitoring a few machines) scale setup, you should be 
   git clone https://github.com/scschneider/sqlserver-perf-monitoring.git
 - Browse to ./sqlserver-perf-monitoring/grafana
 - Run run.sh to pull down the Grafana image create the container
+  ```
   sudo bash ./run.sh
+  ```
 - Browse to the URL where Grafana is running http://[MACHINE_IP]:3000
 - Add your first data source
    Name: influxdb
@@ -54,4 +58,6 @@ If you are doing a small (monitoring a few machines) scale setup, you should be 
 - Browse to ./sqlserver-perf-monitoring/collectd
 - Edit run.sh and change the variables to match your environment
 - Run run.sh to pull down the InfluxDB image create the container
+  ```
   sudo bash ./run.sh
+  ```
