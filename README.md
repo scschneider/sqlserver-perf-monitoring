@@ -16,9 +16,13 @@ There are a few things that you will need bofore you can implement this monitori
 For sizing InfluxDB, refer to their [documentation](https://docs.influxdata.com/influxdb/v1.2/guides/hardware_sizing/#general-hardware-guidelines-for-a-single-node). Also note that it is also recommended that you provision SSD volumes for the InfluxDB data and wal directories. Not a requirement if you are doing a small (monitoring a few machines) scale setup.
 
 - Install Docker Engine
+  ```
   wget -qO- https://get.docker.com/ | sudo sh
+  ```
 - Clone this repository
+  ```
   git clone https://github.com/scschneider/sqlserver-perf-monitoring.git
+  ```
 - Browse to ./sqlserver-perf-monitoring/influxdb
 - Edit run.sh and change the variables to match your environment
 - Run run.sh to pull down the InfluxDB image create the container
@@ -31,9 +35,13 @@ For sizing InfluxDB, refer to their [documentation](https://docs.influxdata.com/
 If you are doing a small (monitoring a few machines) scale setup, you should be fine running this on the same host as your InfluxDB container. We use the image created by [Grafana Labs](http://docs.grafana.org/installation/docker/) and we just added a run.sh file that you can use to run the container.
 
 - Install Docker Engine
+  ```
   wget -qO- https://get.docker.com/ | sudo sh
+  ```
 - If you are running this separately, you will need to clone this repository
+  ```
   git clone https://github.com/scschneider/sqlserver-perf-monitoring.git
+  ```
 - Browse to ./sqlserver-perf-monitoring/grafana
 - Run run.sh to pull down the Grafana image create the container
   ```
@@ -52,9 +60,13 @@ If you are doing a small (monitoring a few machines) scale setup, you should be 
 # Setting up collectd on your Microsoft SQL Server on Linux machine
 
 - Install Docker Engine
+  ```
   wget -qO- https://get.docker.com/ | sudo sh
+  ```
 - Clone this repository
+  ```
   git clone https://github.com/scschneider/sqlserver-perf-monitoring.git
+  ```
 - Browse to ./sqlserver-perf-monitoring/collectd
 - Edit run.sh and change the variables to match your environment
 - Run run.sh to pull down the InfluxDB image create the container
