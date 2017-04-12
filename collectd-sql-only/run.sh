@@ -21,4 +21,4 @@ SQL_POLL_INTERVAL="5"
 sudo docker run -d --privileged --net=host -v /:/host:ro \
         -e "INFLUX_DB_SERVER=$INFLUX_DB_SERVER" -e "INFLUX_DB_PORT=$INFLUX_DB_PORT" \
         -e "SQL_HOSTNAME=$SQL_HOSTNAME" -e "SQL_USERNAME=$SQL_USERNAME" -e "SQL_PASSWORD=$SQL_PASSWORD" -e "SQL_POLL_INTERVAL= $SQL_POLL_INTERVAL" \
-        --name collectd scschneider/sqlserver-perf-monitoring-collectd
+        --name collectd-$SQL_HOSTNAME scschneider/sqlserver-perf-monitoring-collectd-sql-only
