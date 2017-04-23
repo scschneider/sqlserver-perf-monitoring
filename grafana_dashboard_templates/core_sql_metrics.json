@@ -456,7 +456,7 @@
             {
               "format": "short",
               "label": null,
-              "logBase": 10,
+              "logBase": 2,
               "max": null,
               "min": "0",
               "show": true
@@ -860,7 +860,7 @@
           "title": "SQL Server Activity",
           "tooltip": {
             "shared": true,
-            "sort": 1,
+            "sort": 2,
             "value_type": "individual"
           },
           "type": "graph",
@@ -876,7 +876,7 @@
             {
               "format": "short",
               "label": null,
-              "logBase": 10,
+              "logBase": 2,
               "max": null,
               "min": "0",
               "show": true
@@ -914,7 +914,9 @@
             "alignAsTable": true,
             "avg": true,
             "current": true,
-            "max": true,
+            "hideEmpty": true,
+            "hideZero": true,
+            "max": false,
             "min": false,
             "rightSide": true,
             "show": true,
@@ -1415,7 +1417,7 @@
             {
               "format": "short",
               "label": null,
-              "logBase": 10,
+              "logBase": 2,
               "max": null,
               "min": "0",
               "show": true
@@ -1762,7 +1764,7 @@
           "title": "Memory Manager (KB)",
           "tooltip": {
             "shared": true,
-            "sort": 0,
+            "sort": 2,
             "value_type": "individual"
           },
           "type": "graph",
@@ -1893,7 +1895,7 @@
           "title": "Memory Broker Clerks",
           "tooltip": {
             "shared": true,
-            "sort": 0,
+            "sort": 2,
             "value_type": "individual"
           },
           "type": "graph",
@@ -2214,5 +2216,5 @@
   },
   "timezone": "browser",
   "title": "Core SQL Metrics",
-  "version": 4
+  "version": 16
 }
