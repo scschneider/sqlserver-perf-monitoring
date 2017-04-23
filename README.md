@@ -10,6 +10,7 @@ There are a few things that you will need bofore you can implement this monitori
 - A SQL machine or VM that you would like to monitor.
 - 1-2 machines for running InfluxDB and Grafana, depending on how large your deployment is.
 - InfluxDB uses ports 25826 (for inbound metric data) and 8086 (for outbound queries from Grafana)
+- Grafana will use 3000 by default and will need to be opened for inbound connections.
 
 # Setting up InfluxDb.
 
