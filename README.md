@@ -50,10 +50,10 @@ If you are doing a small (monitoring a few machines) scale setup, you should be 
   ```
 - Browse to the URL where Grafana is running http://[MACHINE_IP]:3000
 - Add your first data source
-   Name: influxdb
-   Type: InfluxDB
-   Url: http://[INFLUXDB_IP]:8086 (If you are running Grafana on the same host as InfluxDB, you will need to specify the public end point for your InfluxDB instance. Alternatively, you can edit the run.sh file to include /net=host and the default URL will work.)
-   Database: collectd_db
+  * Name: influxdb
+  * Type: InfluxDB
+  * Url: http://[INFLUXDB_IP]:8086 (If you are running Grafana on the same host as InfluxDB, you will need to specify the public end point for your InfluxDB instance. Alternatively, you can edit the run.sh file to include /net=host and the default URL will work.)
+  * Database: collectd_db
 - Click Add
 - Browse back to the main page and import the dashboards from the dashboard dropdown menu.
   Dashboards are located under ./sqlserver_perf_monitoring/grafana_dashboard_templates
