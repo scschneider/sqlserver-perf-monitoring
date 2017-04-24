@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "4.1.2"
+      "version": "4.2.0"
     },
     {
       "type": "panel",
@@ -1957,7 +1957,7 @@
           "lines": true,
           "linewidth": 1,
           "links": [],
-          "nullPointMode": "connected",
+          "nullPointMode": "null as zero",
           "percentage": false,
           "pointradius": 5,
           "points": false,
@@ -1991,10 +1991,8 @@
                     "type": "field"
                   },
                   {
-                    "params": [
-                      "1s"
-                    ],
-                    "type": "non_negative_derivative"
+                    "params": [],
+                    "type": "difference"
                   }
                 ]
               ],
@@ -2097,10 +2095,8 @@
                     "type": "field"
                   },
                   {
-                    "params": [
-                      "1s"
-                    ],
-                    "type": "non_negative_derivative"
+                    "params": [],
+                    "type": "difference"
                   }
                 ]
               ],
@@ -2216,5 +2212,5 @@
   },
   "timezone": "browser",
   "title": "Core SQL Metrics",
-  "version": 16
+  "version": 8
 }
