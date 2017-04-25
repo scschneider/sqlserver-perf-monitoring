@@ -18,7 +18,7 @@ SQL_PASSWORD="sa_password"
 #The interval that you would like metrics to be pulld from your SQL Server
 SQL_POLL_INTERVAL="5"
 
-sudo docker run -d --privileged --net=host -v /:/host:ro \
+sudo docker create --privileged --net=host -v /:/host:ro \
         -e "INFLUX_DB_SERVER=$INFLUX_DB_SERVER" -e "INFLUX_DB_PORT=$INFLUX_DB_PORT" \
         -e "SQL_HOSTNAME=$SQL_HOSTNAME" -e "SQL_USERNAME=$SQL_USERNAME" -e "SQL_PASSWORD=$SQL_PASSWORD" -e "SQL_POLL_INTERVAL= $SQL_POLL_INTERVAL" \
         --name collectd-$SQL_HOSTNAME scschneider/sqlserver-perf-monitoring-collectd-sql-only
@@ -27,3 +27,4 @@ sudo docker run -d --privileged --net=host -v /:/host:ro \
 #First we copy the template and then we enable the service to come online during reboot.
 sudo cp ./service-template /etc/systemd/system/docker-container@collectd-$SQL_HOSTNAME.service
 sudo systemctl enable docker-container@collectd-$SQL_HOSTNAME
+sudo systemctl start docker-container@collectd-$SQL_HOSTNAME
