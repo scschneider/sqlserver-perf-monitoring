@@ -14,7 +14,7 @@
       "type": "grafana",
       "id": "grafana",
       "name": "Grafana",
-      "version": "4.2.0"
+      "version": "4.1.2"
     },
     {
       "type": "panel",
@@ -42,6 +42,240 @@
   "rows": [
     {
       "collapse": false,
+      "height": 250,
+      "panels": [
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_INFLUXDB}",
+          "fill": 1,
+          "id": 20,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "Transactions/sec",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "type_instance"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "dbi_perf_stats_value",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [
+                      "1s"
+                    ],
+                    "type": "non_negative_derivative"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "type_instance",
+                  "operator": "=",
+                  "value": "Transactions_sec-_Total"
+                },
+                {
+                  "condition": "AND",
+                  "key": "host",
+                  "operator": "=~",
+                  "value": "/^$hostname$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Transactions/sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        },
+        {
+          "aliasColors": {},
+          "bars": false,
+          "datasource": "${DS_INFLUXDB}",
+          "fill": 1,
+          "id": 21,
+          "legend": {
+            "alignAsTable": true,
+            "avg": true,
+            "current": true,
+            "max": true,
+            "min": false,
+            "rightSide": false,
+            "show": true,
+            "total": false,
+            "values": true
+          },
+          "lines": true,
+          "linewidth": 1,
+          "links": [],
+          "nullPointMode": "null",
+          "percentage": false,
+          "pointradius": 5,
+          "points": false,
+          "renderer": "flot",
+          "seriesOverrides": [],
+          "span": 6,
+          "stack": false,
+          "steppedLine": false,
+          "targets": [
+            {
+              "alias": "Batch Requests/sec",
+              "dsType": "influxdb",
+              "groupBy": [
+                {
+                  "params": [
+                    "type_instance"
+                  ],
+                  "type": "tag"
+                }
+              ],
+              "measurement": "dbi_perf_stats_value",
+              "policy": "default",
+              "refId": "A",
+              "resultFormat": "time_series",
+              "select": [
+                [
+                  {
+                    "params": [
+                      "value"
+                    ],
+                    "type": "field"
+                  },
+                  {
+                    "params": [
+                      "1s"
+                    ],
+                    "type": "non_negative_derivative"
+                  }
+                ]
+              ],
+              "tags": [
+                {
+                  "key": "type_instance",
+                  "operator": "=",
+                  "value": "Batch_Requests_sec- "
+                },
+                {
+                  "condition": "AND",
+                  "key": "host",
+                  "operator": "=~",
+                  "value": "/^$hostname$/"
+                }
+              ]
+            }
+          ],
+          "thresholds": [],
+          "timeFrom": null,
+          "timeShift": null,
+          "title": "Batch Requests/sec",
+          "tooltip": {
+            "shared": true,
+            "sort": 0,
+            "value_type": "individual"
+          },
+          "type": "graph",
+          "xaxis": {
+            "mode": "time",
+            "name": null,
+            "show": true,
+            "values": []
+          },
+          "yaxes": [
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            },
+            {
+              "format": "short",
+              "label": null,
+              "logBase": 1,
+              "max": null,
+              "min": null,
+              "show": true
+            }
+          ]
+        }
+      ],
+      "repeat": null,
+      "repeatIteration": null,
+      "repeatRowId": null,
+      "showTitle": false,
+      "title": "Dashboard Row",
+      "titleSize": "h6"
+    },
+    {
+      "collapse": false,
       "height": "250px",
       "panels": [
         {
@@ -59,6 +293,8 @@
             "min": false,
             "rightSide": true,
             "show": true,
+            "sort": "current",
+            "sortDesc": true,
             "total": false,
             "values": true
           },
@@ -86,6 +322,7 @@
                   "type": "tag"
                 }
               ],
+              "hide": true,
               "measurement": "dbi_perf_stats_value",
               "policy": "default",
               "refId": "A",
@@ -456,7 +693,7 @@
             {
               "format": "short",
               "label": null,
-              "logBase": 2,
+              "logBase": 1,
               "max": null,
               "min": "0",
               "show": true
@@ -486,6 +723,8 @@
             "min": false,
             "rightSide": true,
             "show": true,
+            "sort": "current",
+            "sortDesc": true,
             "total": false,
             "values": true
           },
@@ -513,6 +752,7 @@
                   "type": "tag"
                 }
               ],
+              "hide": true,
               "measurement": "dbi_perf_stats_value",
               "policy": "default",
               "refId": "D",
@@ -876,7 +1116,7 @@
             {
               "format": "short",
               "label": null,
-              "logBase": 2,
+              "logBase": 1,
               "max": null,
               "min": "0",
               "show": true
@@ -920,6 +1160,8 @@
             "min": false,
             "rightSide": true,
             "show": true,
+            "sort": "current",
+            "sortDesc": true,
             "total": false,
             "values": true
           },
@@ -1447,6 +1689,8 @@
             "min": false,
             "rightSide": true,
             "show": true,
+            "sort": "current",
+            "sortDesc": true,
             "total": false,
             "values": true
           },
@@ -1808,6 +2052,8 @@
             "min": false,
             "rightSide": true,
             "show": true,
+            "sort": "current",
+            "sortDesc": true,
             "total": false,
             "values": true
           },
@@ -1951,13 +2197,15 @@
             "min": false,
             "rightSide": true,
             "show": true,
+            "sort": "current",
+            "sortDesc": true,
             "total": false,
             "values": true
           },
           "lines": true,
           "linewidth": 1,
           "links": [],
-          "nullPointMode": "null as zero",
+          "nullPointMode": "connected",
           "percentage": false,
           "pointradius": 5,
           "points": false,
@@ -1980,6 +2228,8 @@
               ],
               "measurement": "dbi_wait_time_ms",
               "policy": "default",
+              "query": "SELECT non_negative_derivative(\"value\", 1s) FROM \"dbi_wait_time_ms\" WHERE \"host\" =~ /^$hostname$/ AND $timeFilter GROUP BY \"type_instance\"",
+              "rawQuery": true,
               "refId": "A",
               "resultFormat": "time_series",
               "select": [
@@ -1991,8 +2241,10 @@
                     "type": "field"
                   },
                   {
-                    "params": [],
-                    "type": "difference"
+                    "params": [
+                      "1s"
+                    ],
+                    "type": "non_negative_derivative"
                   }
                 ]
               ],
@@ -2055,6 +2307,8 @@
             "min": false,
             "rightSide": true,
             "show": true,
+            "sort": "current",
+            "sortDesc": true,
             "total": false,
             "values": true
           },
@@ -2095,8 +2349,10 @@
                     "type": "field"
                   },
                   {
-                    "params": [],
-                    "type": "difference"
+                    "params": [
+                      "1s"
+                    ],
+                    "type": "non_negative_derivative"
                   }
                 ]
               ],
@@ -2171,7 +2427,7 @@
         "query": "SHOW TAG VALUES WITH KEY = \"host\"",
         "refresh": 1,
         "regex": "",
-        "sort": 0,
+        "sort": 1,
         "tagValuesQuery": "",
         "tags": [],
         "tagsQuery": "",
@@ -2212,5 +2468,5 @@
   },
   "timezone": "browser",
   "title": "Core SQL Metrics",
-  "version": 8
+  "version": 23
 }
